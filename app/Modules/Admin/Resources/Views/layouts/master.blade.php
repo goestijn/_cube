@@ -46,20 +46,31 @@
 
             <aside id="sidebar">
                 <ul class="navbar-nav">
-                	<li class="nav-item"><a class="nav-link" href="/admin"><i class="fa fa-dashboard"></i>Dashboard</a></li>
+                	<!--<li class="nav-item"><a class="nav-link" href="/admin"><i class="fa fa-dashboard"></i>Dashboard</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#"><i class="fa fa-shopping-cart"></i>Shop</a>
+                        <div class="collapse">
+                            <ul>
+                                <li class="nav-item"><a class="nav-link" href="/admin/users">Brands</a></li>
+                                <li class="nav-item"><a class="nav-link" href="/admin/users/create">Categories</a></li>
+                                <li class="nav-item"><a class="nav-link" href="/admin/users/create">Products</a></li>
+                                <li class="nav-item-seperator"></li>
+                                <li class="nav-item"><a class="nav-link" href="/admin/users/create">Orders</a></li>
+                                <li class="nav-item"><a class="nav-link" href="/admin/users/create">Retours</a></li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#"><i class="fa fa-users"></i>Users</a></li>-->
                 </ul>
            	</aside>
 
             <content id="content">
-                
-				@yield('content')
+
+                @yield('content')
 
             </content>    
 
         </main>
-
-
-        <footer id="footer"></footer>
 
 		<script src="{{ asset('libs/admin/jquery/js/jquery.js') }}"></script>
 		<script src="{{ asset('libs/admin/tether/js/tether.js') }}"></script>

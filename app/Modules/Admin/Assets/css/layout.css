@@ -1,7 +1,32 @@
 body {
     position:relative;
-    background: #edecec;
+    background: #f4f4f4;
     font-family:roboto;
+}
+
+.dropdown-menu .dropdown-item {
+    position:relative;
+    font-weight:500;
+    font-size:14px;
+    line-height:24px;
+    color:rgb(41, 43, 44);
+}
+
+.dropdown-menu .dropdown-item:focus, 
+.dropdown-menu .dropdown-item:hover {
+    background:#f7f7f7;
+    color:rgb(41, 43, 44);
+}
+
+.dropdown-menu .dropdown-item i.dropdown-menu-icon-left {
+    width: 24px;
+    margin-right:7px;
+}
+
+.dropdown-menu .dropdown-header {
+    color:#4C4C4C;
+    text-transform:uppercase;
+    font-size:13px;
 }
 
 #header nav {
@@ -12,7 +37,7 @@ body {
     width: 100%;
     left: 0;
     top: 0;
-    background: #373a3c;
+    background: #1d2022;
 }
 
 #header nav button.navbar-toggler {
@@ -48,7 +73,7 @@ body {
 
 #main > #sidebar {
     position: fixed;
-    background: #fff;
+    background: #303438;
     width:268px;
     height: calc(100% - 70px);
     top: 70px;
@@ -65,17 +90,19 @@ body {
 #main > #sidebar ul.navbar-nav > li > a {
     display:block;
     position:relative;
-    padding:15px 15px 15px 48px;
+    padding: 0 15px 0 48px;
+    margin: 20px 0 10px;
     font-weight:500;
-    color:rgb(41, 43, 44);
+    color:rgba(255, 255, 255, 0.5);
     line-height:18px;
     font-size:14px;
+    text-transform:uppercase;
 }
 
 #main > #sidebar ul.navbar-nav > li > a:hover,
 #main > #sidebar ul.navbar-nav > li > a.active {
     text-decoration: none;
-    background-color: #f7f7f7;
+    color:rgb(255, 255, 255);
 }
 
 #main > #sidebar ul.navbar-nav > li > a:first-child:not(:last-child)::after {
@@ -121,65 +148,44 @@ body {
 }
 
 #main > #sidebar ul.navbar-nav > li > a + div > ul > li > a {
-    padding: 8px 20px 8px 48px;
+    padding: 0 20px 0 63px;
     font-weight: 500;
     display: block;
-    line-height:18px;
+    line-height:1.5rem;
     font-size:14px;
-    color: #989898;
+    color:rgba(255, 255, 255, 0.5);
 }
 
-#main > #sidebar ul.navbar-nav > li > a + div > ul > li > a:first-child:not(:last-child)::after {
-    content:'\f078';
-    position: absolute;
-    right: 15px;
-    width: 18px;
-    height: 18px;
-    line-height: 18px;
-    text-align: center;
-    font-family:FontAwesome;
-    -ms-transition: .3s ease-in-out;
-    -webkit-transition: .3s ease-in-out;
-    -moz-transition: .3s ease-in-out;
-    -o-transition: .3s ease-in-out;
-    transition: .3s ease-in-out;
-}
-
-#main > #sidebar ul.navbar-nav > li > a + div > ul > li > a.active:first-child:not(:last-child)::after {
-    -ms-transform: rotate(180deg);
-    -webkit-transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
-    transform: rotate(180deg);
+#main > #sidebar ul.navbar-nav .nav-item-seperator {
+    margin-top:10px;
 }
 
 #main > #sidebar ul.navbar-nav > li > a + div > ul > li > a:hover,
 #main > #sidebar ul.navbar-nav > li > a + div > ul > li > a.active {
-    color:rgb(41, 43, 44);
+    color:rgb(255, 255, 255);
 }
 
-#main > #sidebar ul.navbar-nav > li > a + div > ul > li > a + div > ul {
+#main > #sidebar ul.navbar-nav > li > a + div > ul > li > a + ul {
     display:block;
     padding:0;
-    background:#F7F7F7;
 }
 
-#main > #sidebar ul.navbar-nav > li > a + div > ul > li > a + div > ul > li {
+#main > #sidebar ul.navbar-nav > li > a + div > ul > li > a + ul > li {
     display:block;
 }
 
-#main > #sidebar ul.navbar-nav > li > a + div > ul > li > a + div > ul > li > a {
-    padding: 8px 20px 8px 48px;
+#main > #sidebar ul.navbar-nav > li > a + div > ul > li > a + ul > li > a {
+    padding: 0 20px 0 78px;
     font-weight: 500;
     display: block;
-    line-height:18px;
+    line-height:1.5rem;
     font-size:14px;
-    color: #989898;
+    color:rgba(255, 255, 255, 0.5);
 }
 
-#main > #sidebar ul.navbar-nav > li > a + div > ul > li > a + div > ul > li > a:hover,
-#main > #sidebar ul.navbar-nav > li > a + div > ul > li > a + div > ul > li > a.active {
-    color:rgb(41, 43, 44);
+#main > #sidebar ul.navbar-nav > li > a + div > ul > li > a + ul > li > a:hover,
+#main > #sidebar ul.navbar-nav > li > a + div > ul > li > a + ul > li > a.active {
+    color:rgb(255, 255, 255);
 }
 
 #main > #content {
