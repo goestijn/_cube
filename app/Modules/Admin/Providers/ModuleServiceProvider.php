@@ -17,10 +17,10 @@ class ModuleServiceProvider extends ServiceProvider
         $this->loadViewsFrom(__DIR__.'/../Resources/Views', 'admin');
         $this->loadMigrationsFrom(__DIR__.'/../Database/Migrations', 'admin');
         $this->publishes([
-            __DIR__.'/../Assets/css' => public_path('css/admin'),
-            __DIR__.'/../Assets/fonts' => public_path('fonts/admin'),
-            __DIR__.'/../Assets/js' => public_path('js/admin'),
-            __DIR__.'/../Assets/libs' => public_path('libs/admin')
+            __DIR__. '/../Assets/css' => public_path('css/admin'),
+            __DIR__. '/../Assets/fonts' => public_path('fonts/admin'),
+            __DIR__. '/../Assets/js' => public_path('js/admin'),
+            __DIR__. '/../Assets/vendors' => public_path('vendors/admin')
         ], 'admin');
     }
 
