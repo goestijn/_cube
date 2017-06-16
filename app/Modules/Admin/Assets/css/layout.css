@@ -65,9 +65,8 @@ body {
     position:absolute;
 }
 
-#main,
-#main-anonymous {
-    padding-top:100px;
+#main {
+    padding-top:70px;
     padding-bottom:30px;
 }
 

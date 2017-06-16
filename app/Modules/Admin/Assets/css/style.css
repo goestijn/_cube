@@ -347,9 +347,8 @@ datagrid > .data > div > a + .actions > .btn-group > button {
     position:absolute;
 }
 
-#main,
-#main-anonymous {
-    padding-top:100px;
+#main {
+    padding-top:70px;
     padding-bottom:30px;
 }
 
