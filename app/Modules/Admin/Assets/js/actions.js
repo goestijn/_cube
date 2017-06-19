@@ -114,11 +114,11 @@ $(document).ready(function () {
             /*-------------------------------------------
                 Login
             --------------------------------------------*/
-            case 'login-switch':
+            /*case 'login-switch':
                 target = $this.data('ma-target');
                 $('.login__block').removeClass('active');
                 $(target).addClass('active');
-                break;
+                break;*/
 
 
             /*-------------------------------------------

@@ -19,4 +19,6 @@ Route::group(['prefix' => 'admin'], function () {
 
     });
 
+    Route::get('/login', 'UsersSessionsController@login');
+
 });

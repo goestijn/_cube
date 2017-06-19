@@ -1,8 +1,16 @@
-@extends('admin::layouts.master')
+@extends('admin::layouts.default')
 
 
 @section('content')
 	
-	<h1>Hello from the admin</h1>
+	<div class="content__inner">
+		
+		<header class="content__title">
+
+			<h1>Dashboard</h1>
+
+		</header>
+
+	</div>
 
 @endsection

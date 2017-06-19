@@ -1,4 +1,4 @@
-@extends('admin::layouts.master')
+@extends('admin::layouts.default')
 
 
 @section('content')
@@ -7,7 +7,7 @@
 		
 		<header class="content__title">
 
-		<h1>Pages</h1>
+			<h1>Pages</h1>
 
 			<div class="actions">
 				
