@@ -11,7 +11,7 @@
 |
 */
 
-Route::group(['prefix' => 'admin/pages'], function () {
+Route::group(['prefix' => 'admin/pages', 'middleware' => 'auth'], function () {
 
     Route::get('/', 'PagesController@index');
 

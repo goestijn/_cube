@@ -30,15 +30,15 @@
                         <div class="user__info" data-toggle="dropdown">
                             <img class="user__img" src="" alt="">
                             <div>
-                                <div class="user__name">John Doe</div>
-                                <div class="user__email">john.doe@cube-9.com</div>
+                                <div class="user__name">{{ Auth::user()->fullname }}</div>
+                                <div class="user__email">{{ Auth::user()->email }}</div>
                             </div>
                         </div>
 
                         <div class="dropdown-menu">
                             <a class="dropdown-item" href="">View Profile</a>
                             <a class="dropdown-item" href="">Settings</a>
-                            <a class="dropdown-item" href="">Logout</a>
+                            <a class="dropdown-item" href="/admin/logout">Logout</a>
                         </div>
 
                     </div>
@@ -87,5 +87,18 @@
             </section>
 
         </main>
+
+@endsection
+
+
+@section('script')
+    
+    <script>
+
+
+        
+    </script>
+
+    @yield('script')
 
 @endsection

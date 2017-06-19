@@ -23,19 +23,27 @@
             </div>
 
             <div class="login__block__body">
-                <div class="form-group form-group--float form-group--centered">
-                    <input type="text" class="form-control">
-                    <label>Email Address</label>
-                    <i class="form-group__bar"></i>
-                </div>
+                
+                <form action="/admin/login" method="post">
 
-                <div class="form-group form-group--float form-group--centered">
-                    <input type="password" class="form-control">
-                    <label>Password</label>
-                    <i class="form-group__bar"></i>
-                </div>
+                    {{ csrf_field() }}
+                    
+                    <div class="form-group form-group--float form-group--centered">
+                        <input type="email" name="email" class="form-control">
+                        <label>Email Address</label>
+                        <i class="form-group__bar"></i>
+                    </div>
 
-                <a href="index.html" class="btn btn-primary btn--icon"><i class="fa fa-sign-in"></i></a>
+                    <div class="form-group form-group--float form-group--centered">
+                        <input type="password" name="password" class="form-control">
+                        <label>Password</label>
+                        <i class="form-group__bar"></i>
+                    </div>
+
+                    <button class="btn btn-primary btn--icon"><i class="fa fa-sign-in"></i></button>
+
+                </form>
+                
             </div>
         </div>
 

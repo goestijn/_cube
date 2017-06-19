@@ -10557,10 +10557,16 @@ textarea {
 .user__name {
   color: #333;
   font-weight: 500;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .user__email {
   color: #969696;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 
 .navigation {

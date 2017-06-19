@@ -36,5 +36,8 @@
         <script src="{{ asset('js/admin/actions.js') }}"></script>
         <script src="{{ asset('js/admin/app.js') }}"></script>
 
+        @yield('script')
+
     </body>
+
 </html>

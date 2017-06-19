@@ -17,8 +17,10 @@ Route::group(['prefix' => 'admin'], function () {
         
     	return view('admin::index');
 
-    });
+    })->middleware('auth');
 
-    Route::get('/login', 'UsersSessionsController@login');
+    Route::get('/login', 'UsersSessionsController@create');
+    Route::post('/login', 'UsersSessionsController@store');
+    Route::get('/logout', 'UsersSessionsController@delete');
 
 });
