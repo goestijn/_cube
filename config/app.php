@@ -166,8 +166,8 @@ return [
         /*
          * Package Service Providers...
          */
-        Caffeinated\Modules\ModulesServiceProvider::class,
         Laravel\Tinker\TinkerServiceProvider::class,
+        Nwidart\Modules\LaravelModulesServiceProvider::class,
 
         /*
          * Application Service Providers...
@@ -212,7 +212,7 @@ return [
         'Lang' => Illuminate\Support\Facades\Lang::class,
         'Log' => Illuminate\Support\Facades\Log::class,
         'Mail' => Illuminate\Support\Facades\Mail::class,
-        'Module' => Caffeinated\Modules\Facades\Module::class,
+        'Module' => Nwidart\Modules\Facades\Module::class,
         'Notification' => Illuminate\Support\Facades\Notification::class,
         'Password' => Illuminate\Support\Facades\Password::class,
         'Queue' => Illuminate\Support\Facades\Queue::class,
