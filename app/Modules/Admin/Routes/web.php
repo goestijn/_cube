@@ -19,8 +19,8 @@ Route::group(['prefix' => 'admin'], function () {
 
     })->middleware('auth');
 
-    Route::get('/login', 'UsersSessionsController@create');
-    Route::post('/login', 'UsersSessionsController@store');
-    Route::get('/logout', 'UsersSessionsController@delete');
+    Route::get('/login', 'UsersSessionsController@create')->middleware('guest');
+    Route::post('/login', 'UsersSessionsController@store')->middleware('guest');
+    Route::get('/logout', 'UsersSessionsController@delete')->middleware('auth');
 
 });
