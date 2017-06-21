@@ -9315,6 +9315,27 @@ select::-ms-expand {
   opacity: 0.8;
 }
 
+.alert--notify span[data-notify="icon"] {
+    position: absolute;
+    left: 12px;
+    width: 40px;
+    height: 40px;
+    font-size: 30px;
+    line-height: 40px;
+    text-align: center;
+}
+
+.alert--notify span[data-notify="title"] {
+    display: block;
+    text-transform: uppercase;
+    font-size: 1.15rem;
+}
+
+.alert--notify span[data-notify="icon"] + span[data-notify="title"],
+.alert--notify span[data-notify="icon"] + span[data-notify="title"] + span[data-notify="message"]  {
+  margin-left:40px;
+}
+
 .alert--notify__close {
   background-color: transparent;
   border: 0;
