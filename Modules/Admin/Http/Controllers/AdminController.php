@@ -14,10 +14,4 @@ class AdminController extends Controller
         return view('admin::index');
     }
 
-    
-    public function store(Request $request)
-    {
-        dd($request->all());
-    }
-
 }

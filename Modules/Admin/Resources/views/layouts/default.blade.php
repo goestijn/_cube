@@ -25,7 +25,7 @@
 
                 <div class="scrollbar-inner">
 
-                    <?php /*<div class="user">
+                    <div class="user">
 
                         <div class="user__info" data-action="navigation-user-sub-toggle">
                             <img class="user__img" src="" alt="">
@@ -42,7 +42,7 @@
                             </ul>
                         </div>
 
-                    </div>*/ ?>
+                    </div>
 
                     <ul class="navigation">
 
