@@ -8,6 +8,7 @@
 		<header class="content__title">
 
 			<h1>Dashboard</h1>
+			{{ csrf_field() }}
 
 		</header>
 
