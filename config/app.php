@@ -168,7 +168,7 @@ return [
          */
         Laravel\Tinker\TinkerServiceProvider::class,
         Nwidart\Modules\LaravelModulesServiceProvider::class,
-
+        
         /*
          * Application Service Providers...
          */
