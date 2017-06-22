@@ -21,7 +21,8 @@
         ],
         "psr-4": {
             "App\\": "app/",
-            "Modules\\": "Modules/"
+            "Modules\\": "Modules/",
+            "Cube\\Flash\\": "packages/cube/flash/src"
         }
     },
     "autoload-dev": {
