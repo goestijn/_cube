@@ -166,7 +166,7 @@ return [
         /*
          * Package Service Providers...
          */
-        Cube\Flash\FlashServiceProvider::class,
+        Cube9\Flash\FlashServiceProvider::class,
         Laravel\Tinker\TinkerServiceProvider::class,
         Nwidart\Modules\LaravelModulesServiceProvider::class,
         
@@ -208,7 +208,7 @@ return [
         'Eloquent' => Illuminate\Database\Eloquent\Model::class,
         'Event' => Illuminate\Support\Facades\Event::class,
         'File' => Illuminate\Support\Facades\File::class,
-        'Flash' => Cube\Flash\Facades\Flash::class,
+        'Flash' => Cube9\Flash\Facades\Flash::class,
         'Gate' => Illuminate\Support\Facades\Gate::class,
         'Hash' => Illuminate\Support\Facades\Hash::class,
         'Lang' => Illuminate\Support\Facades\Lang::class,

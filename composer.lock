@@ -4,8 +4,48 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "content-hash": "179af54db837276832bf303770b88136",
+    "content-hash": "5e23cc303fe3de06ef31e6d115e9fbb7",
     "packages": [
+        {
+            "name": "cube9/flash",
+            "version": "1.0.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/goestijn/flash.git",
+                "reference": "2bd2e72e7e23dd054deda9ad767d60a441bde02c"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/goestijn/flash/zipball/2bd2e72e7e23dd054deda9ad767d60a441bde02c",
+                "reference": "2bd2e72e7e23dd054deda9ad767d60a441bde02c",
+                "shasum": ""
+            },
+            "require": {
+                "laravel/framework": "5.4.*",
+                "php": ">=5.5"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Cube9\\Flash\\": "src"
+                },
+                "files": [
+                    "src/Support/helpers.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Stijn Goethals",
+                    "email": "stijn@goethals-degraeve.net"
+                }
+            ],
+            "description": "A package which adds the ability to simply manage flash messages in a laravel application",
+            "time": "2017-06-23T07:53:40+00:00"
+        },
         {
             "name": "dnoegel/php-xdg-base-dir",
             "version": "0.1",
