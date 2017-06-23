@@ -9,5 +9,17 @@
             "email": "stijn@goethals-degraeve.net"
         }
     ],
-    "minimum-stability": "dev"
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.5",
+        "laravel/framework": "5.4.*"
+    },
+    "autoload": {
+        "psr-4": {
+            "Cube\\Flash\\": "src"
+        },
+        "files": [
+            "src/Support/helpers.php"
+        ]
+    }
 }

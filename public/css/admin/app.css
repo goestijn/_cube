@@ -9284,16 +9284,16 @@ select::-ms-expand {
   background-color: rgba(255, 255, 255, 0.3);
 }
 
-.alert-inverse {
+.alert-default {
   background-color: #2c2c2c;
   border-color: #2c2c2c;
   color: #FFFFFF;
   box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
 }
-.alert-inverse hr {
+.alert-default hr {
   border-top-color: #1f1f1f;
 }
-.alert-inverse .alert-link {
+.alert-default .alert-link {
   color: #e6e6e6;
 }
 
@@ -9302,22 +9302,23 @@ select::-ms-expand {
   width: 100%;
   padding-right: 60px;
 }
-.alert--notify:not(.alert-inverse) .alert--notify__close {
+.alert--notify:not(.alert-default) .alert--notify__close {
   color: #FFFFFF;
 }
-.alert--notify:not(.alert-inverse) .alert--notify__close:hover {
+.alert--notify:not(.alert-default) .alert--notify__close:hover {
   opacity: 0.8;
 }
-.alert--notify.alert-inverse .alert--notify__close {
+.alert--notify.alert-default .alert--notify__close {
   color: #FFEB3B;
 }
-.alert--notify.alert-inverse .alert--notify__close:hover {
+.alert--notify.alert-default .alert--notify__close:hover {
   opacity: 0.8;
 }
 
 .alert--notify span[data-notify="icon"] {
     position: absolute;
     left: 12px;
+    top: calc(50% - 20px);
     width: 40px;
     height: 40px;
     font-size: 30px;
@@ -9331,8 +9332,9 @@ select::-ms-expand {
     font-size: 1.15rem;
 }
 
-.alert--notify span[data-notify="icon"] + span[data-notify="title"],
-.alert--notify span[data-notify="icon"] + span[data-notify="title"] + span[data-notify="message"]  {
+.alert--notify span[data-notify="icon"] + span[data-notify="title"], 
+.alert--notify span[data-notify="icon"] + span[data-notify="title"] + span[data-notify="message"], 
+.alert--notify span[data-notify="icon"] + span[data-notify="message"]  {
   margin-left:40px;
 }
 

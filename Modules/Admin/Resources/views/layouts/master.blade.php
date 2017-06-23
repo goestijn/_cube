@@ -40,8 +40,16 @@
         <script src="{{ asset('js/admin/app.js') }}"></script>
         
         <script>
-            
-            
+
+            @if (Session::has('flash'))
+
+            @foreach (session('flash') as $flash)
+
+                notify('{{$flash->type}}', '{{$flash->message}}', '{{$flash->title}}');
+
+            @endforeach 
+
+            @endif
 
         </script>
 
