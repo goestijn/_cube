@@ -9089,7 +9089,7 @@ select::-ms-expand {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: #39bbb0;
+  background-color: #2196F3;
   z-index: 1;
   opacity: 0;
   transition: background-color 200ms;
@@ -9110,7 +9110,7 @@ select::-ms-expand {
   width: 9px;
   height: 9px;
   border-radius: 50%;
-  background-color: #39bbb0;
+  background-color: #2196F3;
   z-index: 1;
   transform: scale(0);
   transition: transform 200ms;
@@ -9120,7 +9120,7 @@ select::-ms-expand {
 }
 
 .custom-control-input:checked ~ .custom-control-indicator {
-  border-color: #39bbb0;
+  border-color: #2196F3;
 }
 .custom-control-input:disabled ~ .custom-control-indicator {
   opacity: 0.5;
@@ -11594,6 +11594,7 @@ textarea {
 
 .login__block__body {
   padding: 1rem;
+  text-align:left;
 }
 
 .login__block__btn {

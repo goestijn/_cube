@@ -169,14 +169,6 @@
             }
 
         });
-
-        $.ajaxSetup({
-    headers: {
-        'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-    }
-});
-
-        $.post('/admin', {'firstname': 'Stijn', 'lastname' : 'Goethals'});
         
     </script>
 

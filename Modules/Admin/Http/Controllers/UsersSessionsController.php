@@ -17,7 +17,7 @@ class UsersSessionsController extends Controller
 	public function create(Request $request)
 	{
 		
-		if (!Auth()->attempt(['email' => $request->email, 'password' => $request->password])) {
+		if (!Auth()->attempt(['email' => $request->email, 'password' => $request->password], $request->remember ? true : false)) {
 
 			Flash()->danger('No valid user was found for the given credentials', 'Failed to login');
 			return redirect()->back();

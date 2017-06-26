@@ -27,20 +27,26 @@
                 <form action="/admin/login" method="post">
 
                     {{ csrf_field() }}
-                    
-                    <div class="form-group form-group--float form-group--centered">
-                        <input type="email" name="email" class="form-control">
-                        <label>Email Address</label>
+
+                    <div class="form-group">
+                        <input type="email" name="email" value="" placeholder="Email Address" class="form-control form-control-danger">
                         <i class="form-group__bar"></i>
                     </div>
 
-                    <div class="form-group form-group--float form-group--centered">
-                        <input type="password" name="password" class="form-control">
-                        <label>Password</label>
+                    <div class="form-group">
+                        <input type="password" name="password" placeholder="Password" class="form-control">
                         <i class="form-group__bar"></i>
                     </div>
 
-                    <button class="btn btn-primary btn--icon"><i class="fa fa-sign-in"></i></button>
+                    <div class="form-group">
+                        <label class="custom-control custom-checkbox">
+                            <input type="checkbox" name="remember" value="1" class="custom-control-input">
+                            <span class="custom-control-indicator"></span>
+                            <span class="custom-control-description">Remember me</span>
+                        </label>
+                    </div>
+
+                    <button class="btn btn-primary btn--icon-text"><i class="zmdi fa fa-sign-in"></i>Login</button>
 
                 </form>
                 
