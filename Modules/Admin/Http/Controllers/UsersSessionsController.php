@@ -2,7 +2,7 @@
 
 namespace Modules\Admin\Http\Controllers;
 
-use Illuminate\Http\Request;
+use Modules\Admin\Http\Requests\Users\LoginRequest;
 use Illuminate\Routing\Controller;
 
 class UsersSessionsController extends Controller
@@ -10,11 +10,11 @@ class UsersSessionsController extends Controller
 
 	public function show()
 	{
-		return view('admin::login');
+		return view('admin::users.login');
 	}
 
 
-	public function create(Request $request)
+	public function create(LoginRequest $request)
 	{
 		
 		if (!Auth()->attempt(['email' => $request->email, 'password' => $request->password], $request->remember ? true : false)) {

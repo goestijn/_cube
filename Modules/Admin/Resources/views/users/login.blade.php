@@ -24,17 +24,19 @@
 
             <div class="login__block__body">
                 
-                <form action="/admin/login" method="post">
+                <form action="/admin/login" method="post" novalidate>
 
                     {{ csrf_field() }}
 
-                    <div class="form-group">
-                        <input type="email" name="email" value="" placeholder="Email Address" class="form-control form-control-danger">
+                    <div class="form-group @if ($errors->has('email')) has-danger @endif">
+                        @if ($errors->has('email')) <label class="form-control-label">{{$errors->first('email')}}</label> @endif
+                        <input type="email" name="email" value="" placeholder="Email Address" class="form-control @if ($errors->has('email')) form-control-danger @endif">
                         <i class="form-group__bar"></i>
                     </div>
 
-                    <div class="form-group">
-                        <input type="password" name="password" placeholder="Password" class="form-control">
+                    <div class="form-group @if ($errors->has('password')) has-danger @endif">
+                        @if ($errors->has('password')) <label class="form-control-label">{{$errors->first('password')}}</label> @endif
+                        <input type="password" name="password" placeholder="Password" class="form-control @if ($errors->has('password')) form-control-danger @endif">
                         <i class="form-group__bar"></i>
                     </div>
 
