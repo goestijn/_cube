@@ -20,6 +20,17 @@ class UsersTableSeeder extends Seeder
         Model::unguard();
 
         DB::table('users')->insert([
+            'role_id' => 1,
+            'email' => 'root@goethals-degraeve.net',
+            'password' => bcrypt('Root123!'),
+            'firstname' => '',
+            'lastname' => 'Root',
+            'date_of_birth' => '1970-01-01',
+            'created_at' => Carbon::now()
+        ]);
+
+        DB::table('users')->insert([
+            'role_id' => 2,
             'email' => 'stijn@goethals-degraeve.net',
             'password' => bcrypt('Stijn123!'),
             'firstname' => 'Stijn',
@@ -29,6 +40,7 @@ class UsersTableSeeder extends Seeder
         ]);
 
         DB::table('users')->insert([
+            'role_id' => 2,
             'email' => 'mieke@goethals-degraeve.net',
             'password' => bcrypt('Mieke123!'),
             'firstname' => 'Mieke',
@@ -38,6 +50,7 @@ class UsersTableSeeder extends Seeder
         ]);
 
         DB::table('users')->insert([
+            'role_id' => 3,
             'email' => 'dallas@goethals-degraeve.net',
             'password' => bcrypt('Dallas123!'),
             'firstname' => 'Dallas',

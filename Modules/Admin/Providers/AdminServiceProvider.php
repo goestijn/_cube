@@ -3,6 +3,7 @@
 namespace Modules\Admin\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Illuminate\Support\Facades\Gate;
 use Illuminate\Database\Eloquent\Factory;
 
 class AdminServiceProvider extends ServiceProvider
@@ -26,6 +27,7 @@ class AdminServiceProvider extends ServiceProvider
         $this->registerViews();
         $this->registerFactories();
         $this->registerAssets();
+        $this->registerPolicies();
     }
 
     /**
@@ -124,4 +126,19 @@ class AdminServiceProvider extends ServiceProvider
     {
         return [];
     }
+
+    /**
+     * Register policies.
+     *
+     * @return void
+     */
+    public function registerPolicies()
+    {
+
+        Gate::define('view-admin', function ($user) {
+            return $user->hasAccess(['view-admin']);
+        });
+
+    }
+
 }

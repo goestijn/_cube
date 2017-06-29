@@ -4,8 +4,10 @@ namespace Modules\Admin\Database\Seeders;
 
 use Illuminate\Database\Seeder;
 use Illuminate\Database\Eloquent\Model;
+use Carbon\Carbon;
+use DB;
 
-class AdminDatabaseSeeder extends Seeder
+class PermissionsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -17,10 +19,10 @@ class AdminDatabaseSeeder extends Seeder
         
         Model::unguard();
 
-        $this->call(RolesTableSeeder::class);
-        $this->call(UsersTableSeeder::class);
-        $this->call(PermissionsTableSeeder::class);
-    
+        DB::table('permissions')->insert([
+            'name' => 'View Admin',
+            'slug' => 'view-admin',
+        ]);
+
     }
-    
 }

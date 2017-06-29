@@ -17,4 +17,38 @@ class User extends Authenticatable
     
     }
 
+
+    public function getPermissionsAttribute()
+    {
+
+    	return $this->role->permissions;
+
+    }
+
+
+    public function hasAccess(array $permissions)
+    {
+
+    	if ($this->role->id == 1)
+    		return true;
+
+    	foreach ($permissions as $permission) {
+
+			if (!$this->permissions->contains(Permission::where('slug', $permission)->firstOrFail()))
+				return false;
+
+    	}
+
+    	return true;
+
+    }
+
+
+    public function role()
+    {
+
+        return $this->belongsTo(Role::class);
+    
+    }
+
 }
