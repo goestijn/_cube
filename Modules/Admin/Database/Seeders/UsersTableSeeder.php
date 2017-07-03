@@ -21,18 +21,18 @@ class UsersTableSeeder extends Seeder
 
         DB::table('users')->insert([
             'role_id' => 1,
-            'email' => 'root@goethals-degraeve.net',
+            'username' => 'root',
             'password' => bcrypt('Root123!'),
-            'firstname' => '',
-            'lastname' => 'Root',
-            'date_of_birth' => '1970-01-01',
+            'fullname' => 'Root',
             'created_at' => Carbon::now()
         ]);
 
         DB::table('users')->insert([
             'role_id' => 2,
+            'username' => 'stijn.goethals',
             'email' => 'stijn@goethals-degraeve.net',
             'password' => bcrypt('Stijn123!'),
+            'fullname' => 'Stijn Goethals',
             'firstname' => 'Stijn',
             'lastname' => 'Goethals',
             'date_of_birth' => '1992-01-22',
@@ -41,8 +41,10 @@ class UsersTableSeeder extends Seeder
 
         DB::table('users')->insert([
             'role_id' => 2,
+            'username' => 'mieke.degraeve',
             'email' => 'mieke@goethals-degraeve.net',
             'password' => bcrypt('Mieke123!'),
+            'fullname' => 'Mieke Degraeve',
             'firstname' => 'Mieke',
             'lastname' => 'Degraeve',
             'date_of_birth' => '1990-09-17',
@@ -51,8 +53,10 @@ class UsersTableSeeder extends Seeder
 
         DB::table('users')->insert([
             'role_id' => 3,
+            'username' => 'dallas.korolus',
             'email' => 'dallas@goethals-degraeve.net',
             'password' => bcrypt('Dallas123!'),
+            'fullname' => 'Dallas Korolus',
             'firstname' => 'Dallas',
             'lastname' => 'Korolus',
             'date_of_birth' => '2013-06-13',

@@ -8,15 +8,7 @@ class User extends Authenticatable
 {
 	
     protected $fillable = [];
-
-
-    public function getFullnameAttribute()
-    {
-
-        return sprintf('%s %s', $this->firstname, $this->lastname);
     
-    }
-
 
     public function getPermissionsAttribute()
     {

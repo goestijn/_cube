@@ -47,12 +47,14 @@ class RolesPermissionsUsers extends Migration
             
             $table->increments('id');
             $table->unsignedInteger('role_id')->nullable();
-            $table->string('email')->unique();
+            $table->string('username')->unique();
+            $table->string('email')->unique()->nullable();
             $table->string('password');
             $table->rememberToken();
-            $table->string('firstname');
-            $table->string('lastname');
-            $table->date('date_of_birth');
+            $table->string('fullname');
+            $table->string('firstname')->nullable();
+            $table->string('lastname')->nullable();
+            $table->date('date_of_birth')->nullable();
             $table->timestamps();
             $table->softDeletes();
         

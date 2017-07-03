@@ -28,9 +28,9 @@
 
                     {{ csrf_field() }}
 
-                    <div class="form-group @if ($errors->has('email')) has-danger @endif">
-                        @if ($errors->has('email')) <label class="form-control-label">{{$errors->first('email')}}</label> @endif
-                        <input type="email" name="email" value="" placeholder="Email Address" class="form-control @if ($errors->has('email')) form-control-danger @endif">
+                    <div class="form-group @if ($errors->has('username')) has-danger @endif">
+                        @if ($errors->has('username')) <label class="form-control-label">{{$errors->first('username')}}</label> @endif
+                        <input type="username" name="username" value="" placeholder="Username" class="form-control @if ($errors->has('username')) form-control-danger @endif">
                         <i class="form-group__bar"></i>
                     </div>
 

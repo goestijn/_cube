@@ -17,14 +17,14 @@ class UsersSessionsController extends Controller
 	public function create(LoginRequest $request)
 	{
 		
-		if (!Auth()->attempt(['email' => $request->email, 'password' => $request->password], $request->remember ? true : false)) {
+		if (!Auth()->attempt(['username' => $request->username, 'password' => $request->password], $request->remember ? true : false)) {
 
 			Flash()->danger('No valid user was found for the given credentials', 'Failed to login');
 			return redirect()->back();
 
 		}
 		
-    	Flash()->success('You are successfully loged in to the system', sprintf('Hello %s', Auth()->user()->firstname));
+    	Flash()->success('You are successfully loged in to the system', sprintf('Hello %s', !empty(Auth()->user()->firstname) ? Auth()->user()->firstname : Auth()->user()->fullname));
 		return redirect('/admin');
 
 	}
@@ -36,7 +36,7 @@ class UsersSessionsController extends Controller
 		$user = Auth()->user();
 		Auth()->logout();
 
-		Flash()->info('Hope to see you again soon', sprintf('Goodbye %s', $user->firstname));
+		Flash()->info('Hope to see you again soon', sprintf('Goodbye %s', !empty($user->firstname) ? $user->firstname : $user->fullname));
 		return redirect('/admin/login');
 
 	}
