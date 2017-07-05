@@ -47,12 +47,12 @@ class AdminServiceProvider extends ServiceProvider
      */
     protected function registerConfig()
     {
+        
         $this->publishes([
-            __DIR__.'/../Config/config.php' => config_path('admin.php'),
+            __DIR__.'/../Config/config.php' => config_path('admin/config.php'),
+            __DIR__.'/../Config/permissions.php' => config_path('admin/permissions.php'),
         ], 'config');
-        $this->mergeConfigFrom(
-            __DIR__.'/../Config/config.php', 'admin'
-        );
+        
     }
 
     /**
@@ -135,9 +135,7 @@ class AdminServiceProvider extends ServiceProvider
     public function registerPolicies()
     {
 
-        Gate::define('view-admin', function ($user) {
-            return $user->hasAccess(['view-admin']);
-        });
+        Gate::define('view-admin', function ($user) {return $user->hasAccess(['view-admin']);});
 
     }
 

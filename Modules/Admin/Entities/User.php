@@ -26,7 +26,9 @@ class User extends Authenticatable
 
     	foreach ($permissions as $permission) {
 
-			if (!$this->permissions->contains(Permission::where('slug', $permission)->firstOrFail()))
+            $permission = Permission::where('name', $permission)->where('role_id', $this->role->id)->first();
+
+			if (!$this->permissions->contains($permission))
 				return false;
 
     	}

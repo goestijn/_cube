@@ -26,19 +26,11 @@ class RolesPermissionsUsers extends Migration
         Schema::create('permissions', function (Blueprint $table) {
 
             $table->increments('id');
-            $table->string('name');
-            $table->string('slug')->unique();
-
-        });
-
-        Schema::create('permissions_roles', function (Blueprint $table) {
-
-            $table->unsignedInteger('permission_id');
             $table->unsignedInteger('role_id');
+            $table->string('name');
 
-            $table->unique(['permission_id', 'role_id']);
+            $table->unique(['role_id', 'name']);
 
-            $table->foreign('permission_id')->references('id')->on('permissions')->onDelete('cascade');
             $table->foreign('role_id')->references('id')->on('roles')->onDelete('cascade');
 
         });

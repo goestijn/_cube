@@ -1,6 +1,6 @@
 <?php
 
-	Route::get('/', 'AdminController@index')->middleware('can:view-admin');;
+	Route::get('/', 'AdminController@index')->middleware('auth');/*->middleware('can:view-admin')*/;
 	Route::get('/test', 'AdminController@test')->middleware('auth');
 
 	/* USERS AUTHENTICATION */
@@ -10,3 +10,6 @@
 
 	/* ROLES AND PERMISSIONS */
 	Route::get('/roles/{role}/edit', 'RolesController@edit');
+
+	/* TEST */
+	Route::get('/test', 'AdminController@test');

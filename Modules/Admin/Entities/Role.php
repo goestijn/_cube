@@ -13,7 +13,7 @@ class Role extends Model
     public function permissions()
     {
 
-    	return $this->belongsToMany(Permission::class, 'permissions_roles');
+    	return $this->hasMany(Permission::class);
 
     }
 
@@ -21,7 +21,7 @@ class Role extends Model
     public function users()
     {
 
-        return $this->hasMany(Role::class);
+        return $this->hasMany(User::class);
     
     }
 

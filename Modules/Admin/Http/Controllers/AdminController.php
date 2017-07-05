@@ -19,10 +19,11 @@ class AdminController extends Controller
 
     public function test()
     {
-
-    	return (string) Auth()->User()->hasAccess(['view-admin', 'test']);
-    	foreach (Auth()->User()->permissions as $permission)
-    		echo $permission->permission;
+        //dd(\Modules\Admin\Entities\Role::find(2)->users);
+        //dd(Auth()->User()->role->permissions);
+    	return (string) Auth()->User()->hasAccess(['view-admin']) ? 'true' : 'false';
+    	/*foreach (Auth()->User()->permissions as $permission)
+    		echo $permission->name;*/
 
     }
 
