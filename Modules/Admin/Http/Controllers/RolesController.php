@@ -12,7 +12,8 @@ class RolesController extends Controller
 	{
 
 		$role = Role::where('slug', $slug)->firstOrFail();
-		dd($role);
+		
+		return view('admin::roles.edit');
 
 	}
 

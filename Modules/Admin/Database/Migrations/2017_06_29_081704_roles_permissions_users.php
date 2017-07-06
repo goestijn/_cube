@@ -65,7 +65,6 @@ class RolesPermissionsUsers extends Migration
     {
         
         Schema::dropIfExists('users');
-        Schema::dropIfExists('permissions_roles');
         Schema::dropIfExists('permissions');
         Schema::dropIfExists('roles');
 
